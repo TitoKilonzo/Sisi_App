@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="800" height="500" fill="#ffffff"/>
+
+  <!-- ward hall, simplified -->
+  <rect x="230" y="90" width="340" height="150" fill="#1d3f72"/>
+  <rect x="230" y="90" width="340" height="10" fill="#112a4e"/>
+  <path d="M 380 150 Q 380 118 400 118 Q 420 118 420 150 Z" fill="#ffffff"/>
+  <rect x="265" y="140" width="26" height="34" fill="#eef3fb" opacity="0.95"/>
+  <rect x="315" y="140" width="26" height="34" fill="#eef3fb" opacity="0.95"/>
+  <rect x="459" y="140" width="26" height="34" fill="#eef3fb" opacity="0.95"/>
+  <rect x="509" y="140" width="26" height="34" fill="#eef3fb" opacity="0.95"/>
+  <rect x="230" y="235" width="340" height="8" fill="#d7e1f1"/>
+
+  <!-- podium and speaker -->
+  <path d="M 380 300 L 420 300 L 428 340 L 372 340 Z" fill="#2f6fed"/>
+  <circle cx="400" cy="270" r="12" fill="#142236"/>
+  <path d="M 386 300 Q 386 280 400 280 Q 414 280 414 300 Z" fill="#142236"/>
+
+  <!-- seated residents, two arced rows facing the podium -->
+  <g opacity="0.55"><circle cx="160" cy="314.0" r="7.6" fill="#1d3f72"/><path d="M 148.9 331.0 Q 148.9 314.0 160.0 314.0 Q 171.1 314.0 171.1 331.0 Z" fill="#1d3f72"/></g>
+  <g opacity="0.55"><circle cx="230" cy="311.0" r="7.6" fill="#2f6fed"/><path d="M 218.9 328.0 Q 218.9 311.0 230.0 311.0 Q 241.1 311.0 241.1 328.0 Z" fill="#2f6fed"/></g>
+  <g opacity="0.55"><circle cx="300" cy="315.0" r="7.6" fill="#56637a"/><path d="M 288.9 332.0 Q 288.9 315.0 300.0 315.0 Q 311.1 315.0 311.1 332.0 Z" fill="#56637a"/></g>
+  <g opacity="0.55"><circle cx="370" cy="309.0" r="7.6" fill="#1d3f72"/><path d="M 358.9 326.0 Q 358.9 309.0 370.0 309.0 Q 381.1 309.0 381.1 326.0 Z" fill="#1d3f72"/></g>
+  <g opacity="0.55"><circle cx="440" cy="310.0" r="7.6" fill="#2f6fed"/><path d="M 428.9 327.0 Q 428.9 310.0 440.0 310.0 Q 451.1 310.0 451.1 327.0 Z" fill="#2f6fed"/></g>
+  <g opacity="0.55"><circle cx="510" cy="317.0" r="7.6" fill="#56637a"/><path d="M 498.9 334.0 Q 498.9 317.0 510.0 317.0 Q 521.0 317.0 521.0 334.0 Z" fill="#56637a"/></g>
+  <g opacity="0.55"><circle cx="580" cy="310.0" r="7.6" fill="#1d3f72"/><path d="M 569.0 327.0 Q 569.0 310.0 580.0 310.0 Q 591.0 310.0 591.0 327.0 Z" fill="#1d3f72"/></g>
+  <g opacity="0.55"><circle cx="650" cy="314.0" r="7.6" fill="#2f6fed"/><path d="M 639.0 331.0 Q 639.0 314.0 650.0 314.0 Q 661.0 314.0 661.0 331.0 Z" fill="#2f6fed"/></g>
+  <g opacity="0.85"><circle cx="130" cy="405.0" r="9.5" fill="#2f6fed"/><path d="M 116.3 426.0 Q 116.3 405.0 130.0 405.0 Q 143.7 405.0 143.7 426.0 Z" fill="#2f6fed"/></g>
+  <g opacity="0.85"><circle cx="205" cy="413.0" r="9.5" fill="#56637a"/><path d="M 191.3 434.0 Q 191.3 413.0 205.0 413.0 Q 218.7 413.0 218.7 434.0 Z" fill="#56637a"/></g>
+  <g opacity="0.85"><circle cx="280" cy="408.0" r="9.5" fill="#1d3f72"/><path d="M 266.4 429.0 Q 266.4 408.0 280.0 408.0 Q 293.6 408.0 293.6 429.0 Z" fill="#1d3f72"/></g>
+  <g opacity="0.85"><circle cx="355" cy="405.0" r="9.5" fill="#2f6fed"/><path d="M 341.4 426.0 Q 341.4 405.0 355.0 405.0 Q 368.6 405.0 368.6 426.0 Z" fill="#2f6fed"/></g>
+  <g opacity="0.85"><circle cx="430" cy="406.0" r="9.5" fill="#56637a"/><path d="M 416.4 427.0 Q 416.4 406.0 430.0 406.0 Q 443.6 406.0 443.6 427.0 Z" fill="#56637a"/></g>
+  <g opacity="0.85"><circle cx="520" cy="411.0" r="9.5" fill="#1d3f72"/><path d="M 506.4 432.0 Q 506.4 411.0 520.0 411.0 Q 533.6 411.0 533.6 432.0 Z" fill="#1d3f72"/></g>
+  <g opacity="0.85"><circle cx="600" cy="411.0" r="9.5" fill="#2f6fed"/><path d="M 586.4 432.0 Q 586.4 411.0 600.0 411.0 Q 613.6 411.0 613.6 432.0 Z" fill="#2f6fed"/></g>
+  <g opacity="0.85"><circle cx="670" cy="406.0" r="9.5" fill="#56637a"/><path d="M 656.4 427.0 Q 656.4 406.0 670.0 406.0 Q 683.6 406.0 683.6 427.0 Z" fill="#56637a"/></g>
+
+  <!-- ground line -->
+  <rect x="60" y="460" width="680" height="3" fill="#d7e1f1"/>
+</svg>

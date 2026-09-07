@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register — Sisi | Kilimani Ward</title>
+<link rel="icon" type="image/svg+xml" href="images/mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <a class="brand" href="index.html">
+      <img src="images/mark.svg" alt="" width="40" height="40">
+      <h1>Sisi</h1>
+    </a>
+    <p class="locality">Nairobi City County, Kilimani Ward</p>
+  </div>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="participate.html">Participate</a></li>
+      <li><a href="register.html" aria-current="page">Register</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="https://www.cog.go.ke" target="_blank" rel="noopener">Council of Governors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Register in your county and ward</h2>
+    <p>This puts you on the notice list for your ward and lets you comment on and vote for
+    items on the <a href="participate.html">Participate</a> page. It asks for a county and
+    ward, one way to reach you, and nothing else — see the
+    <a href="privacy.html">privacy notice</a> for why.</p>
+    <p class="hint">This is a training form. It posts to a public test endpoint
+    (<code>httpbin.org</code>) that echoes back whatever is submitted, so use made-up details
+    rather than your real name, email or phone number.</p>
+
+    <form action="https://httpbin.org/post" method="post">
+
+      <fieldset>
+        <legend>Where you take part</legend>
+        <p>
+          <label for="county">County</label>
+          <select id="county" name="county" required>
+            <option value="">Choose your county</option>
+            <option value="nairobi" selected>Nairobi City</option>
+            <option value="kiambu">Kiambu</option>
+            <option value="machakos">Machakos</option>
+            <option value="nakuru">Nakuru</option>
+            <option value="kisumu">Kisumu</option>
+            <option value="mombasa">Mombasa</option>
+          </select>
+        </p>
+        <p>
+          <label for="ward">Ward</label>
+          <input id="ward" name="ward" type="text" list="dagoretti-north-wards"
+                 value="Kilimani" required>
+          <datalist id="dagoretti-north-wards">
+            <option value="Kilimani">
+            <option value="Kileleshwa">
+            <option value="Kawangware">
+            <option value="Gatina">
+            <option value="Kabiro">
+            <option value="Riruta">
+          </datalist>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>How we reach you</legend>
+        <p>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+        </p>
+        <p>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel"
+                 pattern="^\+?[0-9 ]{9,15}$" autocomplete="tel"
+                 placeholder="+254 7XX XXX XXX">
+        </p>
+
+        <p>Send notifications by:</p>
+        <div class="choice">
+          <label><input type="radio" name="channel" value="sms" checked> SMS</label>
+          <label><input type="radio" name="channel" value="email"> Email</label>
+          <label><input type="radio" name="channel" value="both"> Both</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What you want to hear about</legend>
+        <div class="choice">
+          <label><input type="checkbox" name="topic" value="roads"> Roads and drainage</label>
+          <label><input type="checkbox" name="topic" value="water"> Water and sanitation</label>
+          <label><input type="checkbox" name="topic" value="halls"> Social halls and parks</label>
+          <label><input type="checkbox" name="topic" value="lighting"> Security lighting</label>
+          <label><input type="checkbox" name="topic" value="education"> Education bursaries</label>
+        </div>
+        <p>
+          <label for="views">Your view on the current CADP proposals (optional)</label>
+          <textarea id="views" name="views" rows="4"
+                    placeholder="What would you like the ward to prioritise, and why?"></textarea>
+        </p>
+      </fieldset>
+
+      <p class="consent">
+        <input type="checkbox" id="consent" name="consent" value="yes" required>
+        <label for="consent">I agree to receive Kilimani Ward notifications on the channel I
+        selected above.</label>
+      </p>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2026 Sisi. An independent civic participation pilot for Kilimani Ward, built
+    around Nairobi City County's public participation calendar.</p>
+    <ul class="footer-links">
+      <li><a href="mailto:habari@sisi.example">Email the team</a></li>
+      <li><a href="tel:+254700000000">Call the ward desk</a></li>
+      <li><a href="privacy.html">Privacy notice</a></li>
+      <li><a href="https://www.odpc.go.ke" target="_blank" rel="noopener">Data Protection Commissioner</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
