@@ -1,0 +1,96 @@
+<svg viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="hero-hall-face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#28518e"/>
+      <stop offset="1" stop-color="#16305a"/>
+    </linearGradient>
+    <linearGradient id="hero-hall-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a63a3"/>
+      <stop offset="1" stop-color="#1d3f72"/>
+    </linearGradient>
+    <linearGradient id="hero-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f6fc"/>
+    </linearGradient>
+    <radialGradient id="hero-halo" cx="0.5" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#eef3fb"/>
+      <stop offset="1" stop-color="#eef3fb" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hero-shadow-lg" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#112a4e" flood-opacity="0.28"/>
+    </filter>
+    <filter id="hero-shadow-sm" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#112a4e" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="280" cy="250" rx="270" ry="250" fill="url(#hero-halo)"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="255" cy="472" rx="190" ry="18" fill="#112a4e" opacity="0.1"/>
+
+  <!-- county hall block -->
+  <g filter="url(#hero-shadow-lg)">
+    <rect x="120" y="150" width="270" height="230" fill="url(#hero-hall-face)"/>
+    <rect x="120" y="150" width="270" height="14" fill="url(#hero-hall-roof)"/>
+    <rect x="110" y="128" width="290" height="24" rx="3" fill="url(#hero-hall-roof)"/>
+    <path d="M235 128 L255 96 L275 128 Z" fill="#3a63a3"/>
+
+    <!-- windows, grid -->
+    <g fill="#dbe6f9">
+      <rect x="150" y="188" width="30" height="40" rx="2"/>
+      <rect x="200" y="188" width="30" height="40" rx="2"/>
+      <rect x="280" y="188" width="30" height="40" rx="2"/>
+      <rect x="330" y="188" width="30" height="40" rx="2"/>
+      <rect x="150" y="252" width="30" height="40" rx="2"/>
+      <rect x="200" y="252" width="30" height="40" rx="2"/>
+      <rect x="330" y="252" width="30" height="40" rx="2"/>
+    </g>
+    <!-- doorway -->
+    <path d="M240 380 L240 320 Q255 300 270 320 L270 380 Z" fill="#0e2748"/>
+
+    <!-- steps -->
+    <rect x="90" y="380" width="330" height="12" fill="#dbe6f9"/>
+    <rect x="100" y="392" width="310" height="12" fill="#c7d6ef"/>
+    <rect x="110" y="404" width="290" height="12" fill="#b3c8e7"/>
+  </g>
+
+  <!-- flag accent -->
+  <line x1="380" y1="128" x2="380" y2="70" stroke="#16305a" stroke-width="4"/>
+  <path d="M380 72 L424 84 L380 96 Z" fill="#2f6fed"/>
+
+  <!-- floating notice card -->
+  <g transform="translate(300 232) rotate(-7)" filter="url(#hero-shadow-lg)">
+    <rect x="-96" y="-118" width="192" height="236" rx="18" fill="url(#hero-card)"/>
+    <rect x="-96" y="-118" width="192" height="44" rx="18" fill="#2f6fed"/>
+    <rect x="-96" y="-96" width="192" height="22" fill="#2f6fed"/>
+    <circle cx="-70" cy="-96" r="10" fill="#ffffff" opacity="0.92"/>
+    <path d="M-74 -96 L-72 -93 L-66 -100" stroke="#2f6fed" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-52" y="-101" width="104" height="10" rx="4" fill="#ffffff" opacity="0.85"/>
+
+    <rect x="-72" y="-52" width="144" height="10" rx="4" fill="#dbe6f9"/>
+    <rect x="-72" y="-30" width="144" height="10" rx="4" fill="#dbe6f9"/>
+    <rect x="-72" y="-8" width="96" height="10" rx="4" fill="#dbe6f9"/>
+
+    <rect x="-72" y="34" width="144" height="40" rx="8" fill="#eef3fb"/>
+    <rect x="-72" y="34" width="60" height="40" rx="8" fill="#1d3f72"/>
+    <rect x="-58" y="48" width="32" height="12" rx="3" fill="#ffffff" opacity="0.9"/>
+    <rect x="10" y="48" width="52" height="12" rx="3" fill="#b3c8e7"/>
+
+    <rect x="-72" y="86" width="144" height="8" rx="4" fill="#dbe6f9"/>
+  </g>
+
+  <!-- verified badge popping off the card -->
+  <g transform="translate(388 172)" filter="url(#hero-shadow-sm)">
+    <circle r="30" fill="#16305a"/>
+    <circle r="30" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+    <path d="M-11 1 L-3 10 L13 -9" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- scattered accent dots for liveliness -->
+  <g filter="url(#hero-shadow-sm)">
+    <circle cx="92" cy="120" r="9" fill="#2f6fed"/>
+    <circle cx="460" cy="330" r="12" fill="#1d3f72"/>
+    <circle cx="70" cy="330" r="7" fill="#56637a" opacity="0.7"/>
+  </g>
+</svg>
