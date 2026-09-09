@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy notice — Sisi</title>
+<title>Privacy notice &mdash; Sisi</title>
 <meta name="description" content="What Sisi collects, what it never asks for, and your rights under Kenya's Data Protection Act, 2019.">
 <link rel="icon" type="image/svg+xml" href="images/mark.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -105,40 +105,63 @@
       <line x1="15" y1="9" x2="9" y2="15"/>
     </symbol>
 
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <line x1="3.5" y1="6.5" x2="20.5" y2="6.5"/>
+      <line x1="3.5" y1="12" x2="20.5" y2="12"/>
+      <line x1="3.5" y1="17.5" x2="20.5" y2="17.5"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </symbol>
+
+    <symbol id="icon-filter" viewBox="0 0 24 24">
+      <path d="M4 5h16"/>
+      <path d="M7 12h10"/>
+      <path d="M10.5 19h3"/>
+    </symbol>
+
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <polyline points="6 9 12 15 18 9"/>
+    </symbol>
+
   </defs>
 </svg>
 
+<div class="utility-bar">
+  <div class="utility-inner">
+    <p class="utility-locality">
+      <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
+      Nairobi City County &middot; Kilimani Ward pilot
+    </p>
+    <a class="utility-link" href="https://www.cog.go.ke" target="_blank" rel="noopener">
+      Council of Governors
+      <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
+    </a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand-block">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
-        <h1>Sisi</h1>
-      </a>
-      <p class="locality">
-        <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
-        Nairobi City County, Kilimani Ward
-      </p>
-    </div>
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
+      <h1>Sisi</h1>
+    </a>
     <nav aria-label="Main">
-      <ul>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"/></svg>
+        Menu
+      </button>
+      <ul id="primaryNav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="participate.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
-          Participate
-        </a></li>
-        <li><a href="register.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
-          Register
-        </a></li>
-        <li><a href="privacy.html" aria-current="page">
-          <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-          Privacy
-        </a></li>
-        <li><a class="external" href="https://www.cog.go.ke" target="_blank" rel="noopener">
-          Council of Governors
-          <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
-        </a></li>
+        <li><a href="participate.html"><svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
+          Participate</a></li>
+        <li><a href="register.html"><svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
+          Register</a></li>
+        <li><a href="privacy.html" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
+          Privacy</a></li>
       </ul>
     </nav>
   </div>
@@ -146,20 +169,23 @@
 
 <main>
 
-  <section class="hero page-hero">
-    <div class="hero-full content-measure">
-      <p class="hero-eyebrow">
+  <div class="full-bleed photo-band photo-cityhall page-banner">
+    <div class="photo-band-inner banner-content">
+      <p class="hero-eyebrow reveal">
         <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
         Data Protection Act, 2019
       </p>
-      <h1>Privacy notice</h1>
-      <p class="lede">Sisi collects only what it needs to send you Kilimani Ward notices and
-      to record your comments in the official participation record — nothing more.</p>
+      <h1 class="reveal">Privacy notice</h1>
+      <p class="lede reveal">Sisi collects only what it needs to send you Kilimani Ward notices
+      and to record your comments in the official participation record &mdash; nothing more.</p>
+      <p class="photo-credit">Background photo:
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a>,
+        via Wikimedia Commons (CC BY-SA 2.0).</p>
     </div>
-  </section>
+  </div>
 
   <article>
-    <p>This follows the data minimisation principle in Kenya's Data Protection Act, 2019 — a
+    <p>This follows the data minimisation principle in Kenya's Data Protection Act, 2019 &mdash; a
     form whose purpose is "send you ward notices" should ask for a ward and a contact channel,
     not a full identity file.</p>
 
@@ -167,18 +193,18 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
       What we collect
     </h2>
-    <ul class="icon-list">
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+    <ul class="icon-list reveal-group">
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
       Your county and ward, so notices reach the right resident list.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
       Your full name, so your submission can be attributed in the public record if you
       choose to comment.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
-      One contact channel — email, phone, or both — matching the notification preference
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+      One contact channel &mdash; email, phone, or both &mdash; matching the notification preference
       you select.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
       The topics you ask to hear about, so we do not send you everything.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
       If you choose to write one, your view on the current budget or development plan.</li>
     </ul>
 
@@ -186,14 +212,14 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg>
       What we do not collect
     </h2>
-    <ul class="icon-list deny">
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> National ID number.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> Date of birth.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> Physical address beyond your ward.</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> Payment or banking information.</li>
+    <ul class="icon-list deny reveal-group">
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> National ID number.</li>
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> Date of birth.</li>
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> Physical address beyond your ward.</li>
+      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#icon-x-circle"/></svg> Payment or banking information.</li>
     </ul>
     <p>Identity verification, if it is ever needed for a formal objection process, belongs at
-    a separate, encrypted step — not folded into a notification sign-up.</p>
+    a separate, encrypted step &mdash; not folded into a notification sign-up.</p>
 
     <h2>
       <svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg>
@@ -251,8 +277,12 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Sisi. An independent civic participation pilot for Kilimani Ward.</p>
+    <p class="footer-credit">Photography via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg" target="_blank" rel="noopener">Nairobi City County Skyline</a> (CC BY-SA 4.0) and
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a> (CC BY-SA 2.0).</p>
   </div>
 </footer>
 
+<script src="scripts/site.js" defer></script>
 </body>
 </html>

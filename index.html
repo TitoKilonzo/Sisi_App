@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sisi — your county, your voice</title>
-<meta name="description" content="Register once with your county and ward and take part in every public participation notice, draft bill and budget hearing that affects you — online.">
+<title>Sisi &mdash; your county, your voice</title>
+<meta name="description" content="Register once with your county and ward and take part in every public participation notice, draft bill and budget hearing that affects you &mdash; online.">
 <link rel="icon" type="image/svg+xml" href="images/mark.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
@@ -105,40 +105,63 @@
       <line x1="15" y1="9" x2="9" y2="15"/>
     </symbol>
 
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <line x1="3.5" y1="6.5" x2="20.5" y2="6.5"/>
+      <line x1="3.5" y1="12" x2="20.5" y2="12"/>
+      <line x1="3.5" y1="17.5" x2="20.5" y2="17.5"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </symbol>
+
+    <symbol id="icon-filter" viewBox="0 0 24 24">
+      <path d="M4 5h16"/>
+      <path d="M7 12h10"/>
+      <path d="M10.5 19h3"/>
+    </symbol>
+
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <polyline points="6 9 12 15 18 9"/>
+    </symbol>
+
   </defs>
 </svg>
 
+<div class="utility-bar">
+  <div class="utility-inner">
+    <p class="utility-locality">
+      <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
+      Nairobi City County &middot; Kilimani Ward pilot
+    </p>
+    <a class="utility-link" href="https://www.cog.go.ke" target="_blank" rel="noopener">
+      Council of Governors
+      <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
+    </a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand-block">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
-        <h1>Sisi</h1>
-      </a>
-      <p class="locality">
-        <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
-        Nairobi City County, Kilimani Ward
-      </p>
-    </div>
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
+      <h1>Sisi</h1>
+    </a>
     <nav aria-label="Main">
-      <ul>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"/></svg>
+        Menu
+      </button>
+      <ul id="primaryNav">
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="participate.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
-          Participate
-        </a></li>
-        <li><a href="register.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
-          Register
-        </a></li>
-        <li><a href="privacy.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-          Privacy
-        </a></li>
-        <li><a class="external" href="https://www.cog.go.ke" target="_blank" rel="noopener">
-          Council of Governors
-          <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
-        </a></li>
+        <li><a href="participate.html"><svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
+          Participate</a></li>
+        <li><a href="register.html"><svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
+          Register</a></li>
+        <li><a href="privacy.html"><svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
+          Privacy</a></li>
       </ul>
     </nav>
   </div>
@@ -151,59 +174,66 @@
     <a href="#window">Jump to the current participation window</a>
   </p>
 
-  <section class="hero">
-    <div>
-      <p class="hero-eyebrow">
-        <svg class="icon" aria-hidden="true"><use href="#icon-megaphone"/></svg>
-        Piloting in Kilimani Ward
-      </p>
-      <h1>Sisi is Kiswahili for us.</h1>
-      <p class="lede">A public participation platform for Kenya's 47 counties. Register once
-      with your county and ward, then respond to every notice, draft bill and budget hearing
-      that affects <em>your</em> ward — online, in the time it takes to read this page.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="register.html">
-          Register for Kilimani Ward
-          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
-        </a>
-        <a class="btn btn-secondary" href="#window">
-          <svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>
-          See the current window
-        </a>
-      </div>
-      <div class="stat-row">
-        <div class="stat-card">
-          <span class="stat-number">47</span>
-          <span class="stat-label">counties this pilot will scale to</span>
+  <div class="full-bleed photo-band photo-skyline hero-band">
+    <div class="photo-band-inner">
+      <section class="hero">
+        <div class="reveal">
+          <p class="hero-eyebrow">
+            <svg class="icon" aria-hidden="true"><use href="#icon-megaphone"/></svg>
+            Piloting in Kilimani Ward
+          </p>
+          <h1>Sisi is Kiswahili for us.</h1>
+          <p class="lede">A public participation platform for Kenya's 47 counties. Register once
+          with your county and ward, then respond to every notice, draft bill and budget hearing
+          that affects <em>your</em> ward &mdash; online, in the time it takes to read this page.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="register.html">
+              Register for Kilimani Ward
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+            </a>
+            <a class="btn btn-secondary" href="#window">
+              <svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>
+              See the current window
+            </a>
+          </div>
+          <div class="stat-row reveal-group">
+            <div class="stat-card reveal">
+              <span class="stat-number">47</span>
+              <span class="stat-label">counties this pilot will scale to</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-number">1</span>
+              <span class="stat-label">ward live today &mdash; Kilimani</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-number">~10 min</span>
+              <span class="stat-label">to register and submit a comment</span>
+            </div>
+          </div>
         </div>
-        <div class="stat-card">
-          <span class="stat-number">1</span>
-          <span class="stat-label">ward live today — Kilimani</span>
+        <div class="hero-figure reveal">
+          <img src="images/hero-illustration.svg" width="560" height="520"
+               alt="Illustration of Kilimani Ward's county hall with a notice being submitted and confirmed on a phone">
         </div>
-        <div class="stat-card">
-          <span class="stat-number">~10 min</span>
-          <span class="stat-label">to register and submit a comment</span>
-        </div>
-      </div>
+      </section>
+      <p class="photo-credit">Background photo:
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg" target="_blank" rel="noopener">Nairobi City County Skyline</a>,
+        via Wikimedia Commons (CC BY-SA 4.0).</p>
     </div>
-    <div class="hero-figure">
-      <img src="images/hero-illustration.svg" width="560" height="520"
-           alt="Illustration of Kilimani Ward's county hall with a notice being submitted and confirmed on a phone">
-    </div>
-  </section>
+  </div>
 
-  <article>
-    <h2>What Sisi does</h2>
+  <article class="reveal-group">
+    <h2 class="reveal">What Sisi does</h2>
     <div class="feature-grid">
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <span class="feature-icon">
           <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
         </span>
         <h3>Every notice, delivered</h3>
         <p>Once you register, county notices, draft bills and budget hearings for your ward
-        reach you by SMS or email — you no longer have to watch for a paper notice board.</p>
+        reach you by SMS or email &mdash; you no longer have to watch for a paper notice board.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <span class="feature-icon">
           <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
         </span>
@@ -211,13 +241,13 @@
         <p>Submit a written comment or vote on a ward project instead of finding a weekday
         free to travel into town for a physical <span lang="sw">baraza</span>.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <span class="feature-icon">
           <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
         </span>
         <h3>Counted the same</h3>
         <p>A written submission carries the same weight in the official record as one made
-        from the floor of a hall — that is the constitutional point of the name.</p>
+        from the floor of a hall &mdash; that is the constitutional point of the name.</p>
       </div>
     </div>
 
@@ -231,29 +261,29 @@
            alt="Illustration of residents seated in front of a ward hall, facing a speaker at a podium during a public forum"
            width="800" height="500">
       <figcaption>A ward <span lang="sw">baraza</span> is still where most Kilimani notices
-      start — Sisi carries the same notice online.</figcaption>
+      start &mdash; Sisi carries the same notice online.</figcaption>
     </figure>
 
-    <div class="quote-card">
+    <div class="quote-card reveal">
       <blockquote cite="https://sisi.example/notices/2026-06-12-kilimani-hearing">
         <p>I used to miss every ward meeting because of my shift at work. Reading the notice
         online and sending in my comment took ten minutes.</p>
       </blockquote>
-      <figcaption>— <cite>Faith N.</cite>, Kilimani resident, June 2026</figcaption>
+      <figcaption>&mdash; <cite>Faith N.</cite>, Kilimani resident, June 2026</figcaption>
     </div>
   </article>
 
   <article>
     <h2>Who can take part</h2>
     <p>Any Kenyan citizen who lives, works or owns property in Kilimani Ward can register and
-    comment on Sisi. You do not need to attend in person — a written submission carries the
+    comment on Sisi. You do not need to attend in person &mdash; a written submission carries the
     same weight in the official record as one made from the floor of a hall.</p>
     <p>Sisi is currently piloting in Nairobi City County, starting with Kilimani Ward in
     Dagoretti North. More wards join as their county assemblies confirm public participation
     calendars.</p>
   </article>
 
-  <section id="window" class="notice">
+  <section id="window" class="notice reveal">
     <p class="deadline-label">
       <svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>
       Comments close
@@ -278,13 +308,33 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-building"/></svg>
       Next forum
     </h2>
-    <p>Ward budget hearing, Kilimani Primary School Hall —
+    <p>Ward budget hearing, Kilimani Primary School Hall &mdash;
     <time datetime="2026-09-12T10:00">12 September 2026, 10:00</time>.</p>
     <p><a href="participate.html#forums">
       See all upcoming forums
       <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
     </a></p>
   </aside>
+
+  <section class="full-bleed photo-band photo-cityhall cta-band reveal">
+    <div class="photo-band-inner">
+      <div class="cta-inner">
+        <div>
+          <h2>Kilimani Ward is a real place with a real calendar</h2>
+          <p class="lede">Every notice on Sisi ties back to an actual sitting &mdash; the ward
+          budget hearing, the CADP comments window, the CBEF forum. Register once and you will
+          not miss the next one.</p>
+        </div>
+        <a class="btn btn-primary" href="register.html">
+          Register now
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+      <p class="photo-credit">Background photo:
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a>,
+        via Wikimedia Commons (CC BY-SA 2.0).</p>
+    </div>
+  </section>
 
 </main>
 
@@ -319,8 +369,12 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Sisi. An independent civic participation pilot for Kilimani Ward.</p>
+    <p class="footer-credit">Photography via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg" target="_blank" rel="noopener">Nairobi City County Skyline</a> (CC BY-SA 4.0) and
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a> (CC BY-SA 2.0).</p>
   </div>
 </footer>
 
+<script src="scripts/site.js" defer></script>
 </body>
 </html>

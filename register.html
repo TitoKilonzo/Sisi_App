@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Register — Sisi | Kilimani Ward</title>
+<title>Register &mdash; Sisi | Kilimani Ward</title>
 <meta name="description" content="Register with your county and ward to receive Kilimani Ward notices and take part in Sisi.">
 <link rel="icon" type="image/svg+xml" href="images/mark.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -105,40 +105,63 @@
       <line x1="15" y1="9" x2="9" y2="15"/>
     </symbol>
 
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <line x1="3.5" y1="6.5" x2="20.5" y2="6.5"/>
+      <line x1="3.5" y1="12" x2="20.5" y2="12"/>
+      <line x1="3.5" y1="17.5" x2="20.5" y2="17.5"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </symbol>
+
+    <symbol id="icon-filter" viewBox="0 0 24 24">
+      <path d="M4 5h16"/>
+      <path d="M7 12h10"/>
+      <path d="M10.5 19h3"/>
+    </symbol>
+
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <polyline points="6 9 12 15 18 9"/>
+    </symbol>
+
   </defs>
 </svg>
 
+<div class="utility-bar">
+  <div class="utility-inner">
+    <p class="utility-locality">
+      <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
+      Nairobi City County &middot; Kilimani Ward pilot
+    </p>
+    <a class="utility-link" href="https://www.cog.go.ke" target="_blank" rel="noopener">
+      Council of Governors
+      <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
+    </a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand-block">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
-        <h1>Sisi</h1>
-      </a>
-      <p class="locality">
-        <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
-        Nairobi City County, Kilimani Ward
-      </p>
-    </div>
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
+      <h1>Sisi</h1>
+    </a>
     <nav aria-label="Main">
-      <ul>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"/></svg>
+        Menu
+      </button>
+      <ul id="primaryNav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="participate.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
-          Participate
-        </a></li>
-        <li><a href="register.html" aria-current="page">
-          <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
-          Register
-        </a></li>
-        <li><a href="privacy.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-          Privacy
-        </a></li>
-        <li><a class="external" href="https://www.cog.go.ke" target="_blank" rel="noopener">
-          Council of Governors
-          <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
-        </a></li>
+        <li><a href="participate.html"><svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
+          Participate</a></li>
+        <li><a href="register.html" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
+          Register</a></li>
+        <li><a href="privacy.html"><svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
+          Privacy</a></li>
       </ul>
     </nav>
   </div>
@@ -146,120 +169,160 @@
 
 <main>
 
-  <section class="hero page-hero">
-    <div class="hero-full content-measure">
-      <p class="hero-eyebrow">
+  <div class="full-bleed photo-band photo-skyline page-banner">
+    <div class="photo-band-inner banner-content">
+      <p class="hero-eyebrow reveal">
         <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
         Two minutes
       </p>
-      <h1>Register in your county and ward</h1>
-      <p class="lede">This puts you on the notice list for your ward and lets you comment on
-      and vote for items on the <a href="participate.html">Participate</a> page. It asks for a
-      county and ward, one way to reach you, and nothing else — see the
+      <h1 class="reveal">Register in your county and ward</h1>
+      <p class="lede reveal">This puts you on the notice list for your ward and lets you comment
+      on and vote for items on the <a href="participate.html">Participate</a> page. It asks for a
+      county and ward, one way to reach you, and nothing else &mdash; see the
       <a href="privacy.html">privacy notice</a> for why.</p>
+      <p class="photo-credit">Background photo:
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg" target="_blank" rel="noopener">Nairobi City County Skyline</a>,
+        via Wikimedia Commons (CC BY-SA 4.0).</p>
     </div>
-  </section>
+  </div>
 
   <section>
     <p class="hint">
       <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-      This is a training form. It posts to a public test endpoint
-      (<code>httpbin.org</code>) that echoes back whatever is submitted, so use made-up details
-      rather than your real name, email or phone number.
+      This form really submits, over the network, to
+      <code>https://httpbin.org/post</code> &mdash; a public test endpoint that echoes back
+      whatever is sent. Use made-up details rather than your real name, email or phone number.
     </p>
 
-    <form action="https://httpbin.org/post" method="post">
+    <p id="registerStatus" class="visually-hidden" role="status" aria-live="polite"></p>
 
-      <fieldset>
-        <legend>
-          <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
-          Where you take part
-        </legend>
-        <p>
-          <label for="county">County</label>
-          <select id="county" name="county" required>
-            <option value="">Choose your county</option>
-            <option value="nairobi" selected>Nairobi City</option>
-            <option value="kiambu">Kiambu</option>
-            <option value="machakos">Machakos</option>
-            <option value="nakuru">Nakuru</option>
-            <option value="kisumu">Kisumu</option>
-            <option value="mombasa">Mombasa</option>
-          </select>
-        </p>
-        <p>
-          <label for="ward">Ward</label>
-          <input id="ward" name="ward" type="text" list="dagoretti-north-wards"
-                 value="Kilimani" required>
-          <datalist id="dagoretti-north-wards">
-            <option value="Kilimani">
-            <option value="Kileleshwa">
-            <option value="Kawangware">
-            <option value="Gatina">
-            <option value="Kabiro">
-            <option value="Riruta">
-          </datalist>
-        </p>
-      </fieldset>
+    <div id="registerFormPanel">
 
-      <fieldset>
-        <legend>
-          <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
-          How we reach you
-        </legend>
-        <p>
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" required autocomplete="name">
-        </p>
-        <p>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email">
-        </p>
-        <p>
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel"
-                 pattern="^\+?[0-9 ]{9,15}$" autocomplete="tel"
-                 placeholder="+254 7XX XXX XXX">
+      <p class="form-error" id="registerError" role="alert"></p>
+
+      <form id="registerForm" action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+          <legend>
+            <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
+            Where you take part
+          </legend>
+          <p>
+            <label for="county">County</label>
+            <span class="select-wrap">
+              <select id="county" name="county" required>
+                <option value="">Choose your county</option>
+                <option value="Nairobi City" selected>Nairobi City</option>
+                <option value="Kiambu">Kiambu</option>
+                <option value="Machakos">Machakos</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Mombasa">Mombasa</option>
+              </select>
+              <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </span>
+          </p>
+          <p>
+            <label for="ward">Ward</label>
+            <input id="ward" name="ward" type="text" list="dagoretti-north-wards"
+                   value="Kilimani" required>
+            <datalist id="dagoretti-north-wards">
+              <option value="Kilimani">
+              <option value="Kileleshwa">
+              <option value="Kawangware">
+              <option value="Gatina">
+              <option value="Kabiro">
+              <option value="Riruta">
+            </datalist>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+            How we reach you
+          </legend>
+          <p>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </p>
+          <p>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel"
+                   pattern="^\+?[0-9 ]{9,15}$" autocomplete="tel"
+                   placeholder="+254 7XX XXX XXX">
+          </p>
+
+          <p>Send notifications by:</p>
+          <div class="choice">
+            <label><input type="radio" name="channel" value="sms" checked> SMS</label>
+            <label><input type="radio" name="channel" value="email"> Email</label>
+            <label><input type="radio" name="channel" value="both"> Both</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
+            What you want to hear about
+          </legend>
+          <div class="choice">
+            <label><input type="checkbox" name="topic" value="roads"> Roads and drainage</label>
+            <label><input type="checkbox" name="topic" value="water"> Water and sanitation</label>
+            <label><input type="checkbox" name="topic" value="halls"> Social halls and parks</label>
+            <label><input type="checkbox" name="topic" value="lighting"> Security lighting</label>
+            <label><input type="checkbox" name="topic" value="education"> Education bursaries</label>
+          </div>
+          <p>
+            <label for="views">Your view on the current CADP proposals (optional)</label>
+            <textarea id="views" name="views" rows="4"
+                      placeholder="What would you like the ward to prioritise, and why?"></textarea>
+          </p>
+        </fieldset>
+
+        <p class="consent">
+          <input type="checkbox" id="consent" name="consent" value="yes" required>
+          <label for="consent">I agree to receive Kilimani Ward notifications on the channel I
+          selected above.</label>
         </p>
 
-        <p>Send notifications by:</p>
-        <div class="choice">
-          <label><input type="radio" name="channel" value="sms" checked> SMS</label>
-          <label><input type="radio" name="channel" value="email"> Email</label>
-          <label><input type="radio" name="channel" value="both"> Both</label>
+        <button type="submit" id="registerSubmit">
+          Register
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="success-panel" id="registerSuccess" hidden>
+      <span class="success-icon">
+        <svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+      </span>
+      <h2 id="registerSuccessHeading" tabindex="-1">You're registered</h2>
+      <p>Kilimani Ward notices will now reach you on the channel you chose. Here's what was
+      sent:</p>
+      <dl class="success-summary">
+        <div>
+          <dt>Name</dt>
+          <dd id="summaryName">&mdash;</dd>
         </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>
-          <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
-          What you want to hear about
-        </legend>
-        <div class="choice">
-          <label><input type="checkbox" name="topic" value="roads"> Roads and drainage</label>
-          <label><input type="checkbox" name="topic" value="water"> Water and sanitation</label>
-          <label><input type="checkbox" name="topic" value="halls"> Social halls and parks</label>
-          <label><input type="checkbox" name="topic" value="lighting"> Security lighting</label>
-          <label><input type="checkbox" name="topic" value="education"> Education bursaries</label>
+        <div>
+          <dt>Ward</dt>
+          <dd id="summaryPlace">&mdash;</dd>
         </div>
-        <p>
-          <label for="views">Your view on the current CADP proposals (optional)</label>
-          <textarea id="views" name="views" rows="4"
-                    placeholder="What would you like the ward to prioritise, and why?"></textarea>
-        </p>
-      </fieldset>
-
-      <p class="consent">
-        <input type="checkbox" id="consent" name="consent" value="yes" required>
-        <label for="consent">I agree to receive Kilimani Ward notifications on the channel I
-        selected above.</label>
-      </p>
-
-      <button type="submit">
-        Register
-        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+        <div>
+          <dt>Notify by</dt>
+          <dd id="summaryChannel">&mdash;</dd>
+        </div>
+      </dl>
+      <button type="button" class="btn btn-secondary" id="registerReset">
+        <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
+        Register someone else
       </button>
-    </form>
+    </div>
   </section>
 
 </main>
@@ -295,8 +358,13 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Sisi. An independent civic participation pilot for Kilimani Ward.</p>
+    <p class="footer-credit">Photography via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg" target="_blank" rel="noopener">Nairobi City County Skyline</a> (CC BY-SA 4.0) and
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a> (CC BY-SA 2.0).</p>
   </div>
 </footer>
 
+<script src="scripts/site.js" defer></script>
+<script src="scripts/register.js" defer></script>
 </body>
 </html>

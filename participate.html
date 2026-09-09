@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Participate — Sisi | Kilimani Ward</title>
+<title>Participate &mdash; Sisi | Kilimani Ward</title>
 <meta name="description" content="Upcoming forums, projects open for resident voting, and the ward's development allocation for Kilimani Ward.">
 <link rel="icon" type="image/svg+xml" href="images/mark.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -105,40 +105,63 @@
       <line x1="15" y1="9" x2="9" y2="15"/>
     </symbol>
 
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <line x1="3.5" y1="6.5" x2="20.5" y2="6.5"/>
+      <line x1="3.5" y1="12" x2="20.5" y2="12"/>
+      <line x1="3.5" y1="17.5" x2="20.5" y2="17.5"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </symbol>
+
+    <symbol id="icon-filter" viewBox="0 0 24 24">
+      <path d="M4 5h16"/>
+      <path d="M7 12h10"/>
+      <path d="M10.5 19h3"/>
+    </symbol>
+
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <polyline points="6 9 12 15 18 9"/>
+    </symbol>
+
   </defs>
 </svg>
 
+<div class="utility-bar">
+  <div class="utility-inner">
+    <p class="utility-locality">
+      <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
+      Nairobi City County &middot; Kilimani Ward pilot
+    </p>
+    <a class="utility-link" href="https://www.cog.go.ke" target="_blank" rel="noopener">
+      Council of Governors
+      <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
+    </a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand-block">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
-        <h1>Sisi</h1>
-      </a>
-      <p class="locality">
-        <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
-        Nairobi City County, Kilimani Ward
-      </p>
-    </div>
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="images/mark.svg" alt=""></span>
+      <h1>Sisi</h1>
+    </a>
     <nav aria-label="Main">
-      <ul>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"/></svg>
+        Menu
+      </button>
+      <ul id="primaryNav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="participate.html" aria-current="page">
-          <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
-          Participate
-        </a></li>
-        <li><a href="register.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
-          Register
-        </a></li>
-        <li><a href="privacy.html">
-          <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-          Privacy
-        </a></li>
-        <li><a class="external" href="https://www.cog.go.ke" target="_blank" rel="noopener">
-          Council of Governors
-          <svg class="icon" aria-hidden="true"><use href="#icon-external-link"/></svg>
-        </a></li>
+        <li><a href="participate.html" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
+          Participate</a></li>
+        <li><a href="register.html"><svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
+          Register</a></li>
+        <li><a href="privacy.html"><svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg>
+          Privacy</a></li>
       </ul>
     </nav>
   </div>
@@ -146,37 +169,40 @@
 
 <main>
 
-  <section class="hero page-hero">
-    <div class="hero-full">
-      <p class="hero-eyebrow">
+  <div class="full-bleed photo-band photo-cityhall page-banner">
+    <div class="photo-band-inner banner-content">
+      <p class="hero-eyebrow reveal">
         <svg class="icon" aria-hidden="true"><use href="#icon-ballot"/></svg>
         Kilimani Ward
       </p>
-      <h1>Participate</h1>
-      <p class="lede">Forums to attend, projects open for ranking, and where this year's
-      development allocation is going.</p>
+      <h1 class="reveal">Participate</h1>
+      <p class="lede reveal">Forums to attend, projects open for ranking, and where this
+      year's development allocation is going.</p>
+      <p class="photo-credit">Background photo:
+        <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a>,
+        via Wikimedia Commons (CC BY-SA 2.0).</p>
     </div>
-  </section>
+  </div>
 
   <section id="forums">
     <h2>
       <svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>
       Upcoming forums
     </h2>
-    <div class="feature-grid">
-      <div class="feature-card">
+    <div class="feature-grid reveal-group">
+      <div class="feature-card reveal">
         <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-building"/></svg></span>
         <h3>Ward budget hearing</h3>
         <p>Kilimani Primary School Hall<br>
         <time datetime="2026-09-12">12 September 2026</time></p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-megaphone"/></svg></span>
         <h3>CADP comments close</h3>
         <p>Kilimani's <abbr title="County Annual Development Plan">CADP</abbr> 2027/28 proposals<br>
         <time datetime="2026-09-20">20 September 2026</time></p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg></span>
         <h3>CIDP mid-term review</h3>
         <p><abbr title="County Integrated Development Plan">CIDP</abbr>, Dagoretti North Sub-County Offices<br>
@@ -192,7 +218,28 @@
     </h2>
     <p>Each project below has cleared technical appraisal and is open for resident ranking
     ahead of the next <abbr title="County Budget and Economic Forum">CBEF</abbr> sitting.</p>
-    <div class="table-wrap">
+
+    <div class="table-toolbar">
+      <div class="filter-field">
+        <label for="sectorFilter">
+          <svg class="icon" aria-hidden="true"><use href="#icon-filter"/></svg>
+          Filter by sector
+        </label>
+        <div class="select-wrap">
+          <select id="sectorFilter">
+            <option value="all">All sectors</option>
+            <option value="roads">Roads and drainage</option>
+            <option value="water">Water and sanitation</option>
+            <option value="halls">Social halls and parks</option>
+            <option value="lighting">Security lighting</option>
+          </select>
+          <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+        </div>
+      </div>
+      <p class="filter-count" id="filterCount" aria-live="polite">Showing all 4 projects</p>
+    </div>
+
+    <div class="table-wrap reveal">
       <table>
         <caption>Kilimani Ward projects open for voting, as at
           <time datetime="2026-09-07">7 September 2026</time></caption>
@@ -205,8 +252,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Ngong Road service-lane lighting</th>
+          <tr data-project-row data-sector="lighting">
+            <th scope="row"><span class="sector-dot" aria-hidden="true"></span>Ngong Road service-lane lighting</th>
             <td>Kilimani</td>
             <td class="num">8,000,000</td>
             <td class="num">
@@ -215,8 +262,8 @@
               </span>
             </td>
           </tr>
-          <tr>
-            <th scope="row">Storm drainage, General Mathenge junction</th>
+          <tr data-project-row data-sector="roads">
+            <th scope="row"><span class="sector-dot" aria-hidden="true"></span>Storm drainage, General Mathenge junction</th>
             <td>Kilimani</td>
             <td class="num">6,500,000</td>
             <td class="num">
@@ -225,8 +272,8 @@
               </span>
             </td>
           </tr>
-          <tr>
-            <th scope="row">Kilimani Social Hall renovation</th>
+          <tr data-project-row data-sector="halls">
+            <th scope="row"><span class="sector-dot" aria-hidden="true"></span>Kilimani Social Hall renovation</th>
             <td>Kilimani</td>
             <td class="num">4,200,000</td>
             <td class="num">
@@ -235,8 +282,8 @@
               </span>
             </td>
           </tr>
-          <tr>
-            <th scope="row">Non-motorised transport walkway, Ngong Road</th>
+          <tr data-project-row data-sector="roads">
+            <th scope="row"><span class="sector-dot" aria-hidden="true"></span>Non-motorised transport walkway, Ngong Road</th>
             <td>Kilimani</td>
             <td class="num">9,800,000</td>
             <td class="num">
@@ -291,7 +338,7 @@
           <svg class="icon" aria-hidden="true"><use href="#icon-building"/></svg>
           CIDP
         </dt>
-        <dd>County Integrated Development Plan — a county's five-year development plan,
+        <dd>County Integrated Development Plan &mdash; a county's five-year development plan,
         reviewed at its mid-term.</dd>
       </div>
       <div>
@@ -299,7 +346,7 @@
           <svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>
           CADP
         </dt>
-        <dd>County Annual Development Plan — the CIDP broken into one financial year, drafted
+        <dd>County Annual Development Plan &mdash; the CIDP broken into one financial year, drafted
         each September and used to prepare the following year's budget.</dd>
       </div>
       <div>
@@ -307,7 +354,7 @@
           <svg class="icon" aria-hidden="true"><use href="#icon-users"/></svg>
           CBEF
         </dt>
-        <dd>County Budget and Economic Forum — the forum where county government and
+        <dd>County Budget and Economic Forum &mdash; the forum where county government and
         resident representatives agree budget priorities before they go to the county
         assembly.</dd>
       </div>
@@ -355,8 +402,12 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Sisi. An independent civic participation pilot for Kilimani Ward.</p>
+    <p class="footer-credit">Photography via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg" target="_blank" rel="noopener">Nairobi City County Skyline</a> (CC BY-SA 4.0) and
+      <a href="https://commons.wikimedia.org/wiki/File:Nairobi_city_hall.jpg" target="_blank" rel="noopener">Nairobi City Hall</a> (CC BY-SA 2.0).</p>
   </div>
 </footer>
 
+<script src="scripts/site.js" defer></script>
 </body>
 </html>
