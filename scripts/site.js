@@ -99,4 +99,81 @@
     sectorFilter.addEventListener("change", applyFilter);
     applyFilter();
   }
+
+  /* ---------- Real Sisi project list logic ---------- */
+
+  var projectListOutput = document.getElementById("sisiProjectListResults");
+
+  if (projectListOutput) {
+    var projects = [
+      { id: 1, title: "Ngong Road service-lane lighting", budget: 8000000, votes: 412, sector: "lighting" },
+      { id: 2, title: "Storm drainage, General Mathenge junction", budget: 6500000, votes: 288, sector: "roads" },
+      { id: 3, title: "Kilimani Social Hall renovation", budget: 4200000, votes: 195, sector: "halls" },
+      { id: 4, title: "Non-motorised transport walkway, Ngong Road", budget: 9800000, votes: 356, sector: "roads" }
+    ];
+
+    projects.push({
+      id: 5,
+      title: "Kalimoni dispersion",
+      budget: 900000,
+      votes: 78,
+      sector: "water"
+    });
+
+    var totalBudget = projects.reduce(function (sum, project) {
+      return sum + project.budget;
+    }, 0);
+
+    var totalVotes = projects.reduce(function (sum, project) {
+      return sum + project.votes;
+    }, 0);
+
+    var highVoteProjects = projects
+      .filter(function (project) {
+        return project.votes > 400;
+      })
+      .map(function (project) {
+        return project.title;
+      });
+
+    var projectThree = projects.find(function (project) {
+      return project.id === 3;
+    });
+
+    var allBelowSixMillion = projects.every(function (project) {
+      return project.budget < 6000000;
+    });
+
+    var titlesSentence = projects.map(function (project) {
+      return project.title;
+    }).join(", ");
+
+    var shortSummary = [
+      "<h3>Executed project list</h3>",
+      "<ul>",
+      "<li><strong>Count:</strong> " + projects.length + " projects</li>",
+      "<li><strong>First title:</strong> " + projects[0].title + "</li>",
+      "<li><strong>Last title:</strong> " + projects[projects.length - 1].title + "</li>",
+      "<li><strong>Titles:</strong> " + titlesSentence + "</li>",
+      "<li><strong>Total budget:</strong> KES " + totalBudget.toLocaleString("en-KE") + "</li>",
+      "<li><strong>Total votes:</strong> " + totalVotes.toLocaleString("en-KE") + "</li>",
+      "<li><strong>Projects above 400 votes:</strong> " + (highVoteProjects.length ? highVoteProjects.join(", ") : "None") + "</li>",
+      "<li><strong>Project with id 3:</strong> " + projectThree.title + "</li>",
+      "<li><strong>Every project under KES 6,000,000:</strong> " + (allBelowSixMillion ? "Yes" : "No") + "</li>",
+      "</ul>"
+    ].join("");
+
+    projectListOutput.innerHTML = shortSummary;
+
+    console.log("The Sisi project list");
+    console.log("Project count:", projects.length);
+    console.log("First project:", projects[0].title);
+    console.log("Last project:", projects[projects.length - 1].title);
+    console.log("All titles:", titlesSentence);
+    console.log("Total budget (KES):", totalBudget.toLocaleString("en-KE"));
+    console.log("Total votes:", totalVotes.toLocaleString("en-KE"));
+    console.log("Projects with more than 400 votes:", highVoteProjects);
+    console.log("Project with id 3:", projectThree);
+    console.log("Every project costs under KES 6,000,000:", allBelowSixMillion);
+  }
 })();
