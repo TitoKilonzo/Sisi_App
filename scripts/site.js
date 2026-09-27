@@ -144,9 +144,13 @@
       return project.budget < 6000000;
     });
 
-    var titlesSentence = projects.map(function (project) {
+    function formatProjectTitles(projectList, formatTitle) {
+      return projectList.map(formatTitle).join(", ");
+    }
+
+    var titlesSentence = formatProjectTitles(projects, function (project) {
       return project.title;
-    }).join(", ");
+    });
 
     var shortSummary = [
       "<h3>Executed project list</h3>",
